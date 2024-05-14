@@ -1,12 +1,24 @@
-def compute_hcf(x, y):
-    if x > y:
-        smaller = y
-    else:
-        smaller = x
-    for i in range(1, smaller+1):
-        if((x % i == 0) and (y % i == 0)):
-            hcf = i 
-    return hcf
-num1 = 54 
-num2 = 24
-print("The H.C.F. is", compute_hcf(num1, num2))
+# Program to multiply two matrices (vectorized implementation)
+ 
+# Program to multiply two matrices (vectorized implementation)
+import numpy as np
+# take a 3x3 matrix
+A = [[12, 7, 3],
+    [4, 5, 6],
+    [7, 8, 9]]
+ 
+# take a 3x4 matrix
+B = [[5, 8, 1, 2],
+    [6, 7, 3, 0],
+    [4, 5, 9, 1]]
+ 
+# result will be 3x4
+ 
+result= [[0,0,0,0],
+        [0,0,0,0],
+        [0,0,0,0]]
+ 
+result = np.dot(A,B)
+ 
+for r in result:
+    print(r)
