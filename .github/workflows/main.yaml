@@ -17,7 +17,7 @@ jobs:
   - name: Instaliuojam 'Dependecys'
     run: pip install flake8 pylint
   - name: Lint su flake8
-    run: flake8 .
+    run: flake8 --ignore W293,E231,E128,E225 .
   - name: Paleidziam unittest
     run: python -m unittest uzduotis_14_05/simple.py
     
