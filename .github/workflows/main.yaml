@@ -13,4 +13,8 @@ jobs:
      python-version: '3.9'
   - name: Parodyti versija
     run: python -c "import sys; print(sys.version)"
+  - name: Instaliuojam 'Dependecys'
+    run: pip install flake8 pylint
+  - name: Lint su flake8
+    run: flake8 .
     
