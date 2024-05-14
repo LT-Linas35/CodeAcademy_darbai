@@ -1,13 +1,16 @@
-name: default
+name: pitonas 
 
-on:
- push:
+on: [commit]
 
 jobs:
  build:
-  runs-on: apine
+  runs-on: ubuntu-latest
   steps:
-  - name: Commit & Push Changes
-    uses: actions-js/push@master
+  - uses: actions/checkout@v4
+  - name: irasom pitona
+    uses: actions/setup-python@v5
     with:
-     github_tokes: ${{ secrets.GITHUB_TOKEN }}
+     python-version: '3.9'
+  - name: Parodyti versija
+    run: python -c "import sys; print(sys.version)"
+    
