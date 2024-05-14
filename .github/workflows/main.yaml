@@ -1,6 +1,6 @@
 name: pitonas 
 
-on: [commit]
+on: [push]
 
 jobs:
  build:
