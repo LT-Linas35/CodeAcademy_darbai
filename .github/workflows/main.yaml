@@ -1,0 +1,8 @@
+jobs:
+ build:
+  runs-on: apine
+  steps:
+  - name: Commit & Push Changes
+    uses: actions-js/push@master
+    with:
+     github_tokes: ${{ secrets.GITHUB_TOKEN }}
