@@ -18,6 +18,8 @@ jobs:
     run: pip install flake8 pylint
   - name: Lint su flake8
     run: flake8 --ignore W293,E231,E128,E225 .
-  - name: Paleidziam unittest
+  - name: Instaliuojam moduli numpy
+    run: pip install numpy
+  - name: Paleidziam test
     run: python -m unittest uzduotis_14_05/simple.py
     
