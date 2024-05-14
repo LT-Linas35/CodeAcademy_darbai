@@ -1,5 +1,5 @@
 name: pitonas 
-runs-on: self-hosted
+#runs-on: self-hosted
 
 on: [push]
 
