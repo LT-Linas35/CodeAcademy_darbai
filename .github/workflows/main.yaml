@@ -18,4 +18,6 @@ jobs:
     run: pip install flake8 pylint
   - name: Lint su flake8
     run: flake8 .
+  - name: Paleidziam unittest
+    run: python -m unittest uzduotis_14_05/simple.py
     
