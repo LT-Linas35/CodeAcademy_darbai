@@ -7,7 +7,9 @@
     "prettify": "prettier -l --write \"**/*.js\"",
     "test": "jest",
     "dev": "nodemon -L src/index.js",
-    "lint": "eslint 'src/**/*.js?(x)'"
+    "lint_es": "eslint 'src/**/*.js?(x)'",
+    "lint_ts": "tslint 'src/**/*.ts?(x)'"
+
   },
   "dependencies": {
     "express": "^4.18.2",

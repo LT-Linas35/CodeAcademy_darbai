@@ -1,6 +1,4 @@
-FROM alpine AS pirmas
-RUN apk update
-RUN apk add npm
+FROM node AS pirmas
 WORKDIR /
 COPY CodeAcademyTask /CodeAcademyTask
 WORKDIR /CodeAcademyTask

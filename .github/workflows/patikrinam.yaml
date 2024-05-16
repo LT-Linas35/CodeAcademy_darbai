@@ -5,16 +5,13 @@ on: [push]
 jobs:
  build:
   name: Lintinam
-  runs-on: alpine
+  runs-on: node
   steps:
-  - name: Uzabdeitinam apk repositorys
-  run: apk update
-  - name: Irasome npm ir eslint
-  run: apk add npm
-  run: npm install --save-dev eslint
+  - name: Irasome tslint ir eslint
+  run: npm install --save-dev eslint globals @eslint/js tslint
   - name: Pradedam testus
   run: npm run test
-  run: ./node_modules/.bin/eslint --init
-  run: npm run lint
+  run: npm run lint_es
+  run: npm run lint_ts
   
   
