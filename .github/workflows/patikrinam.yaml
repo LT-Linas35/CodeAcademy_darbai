@@ -1,17 +1,12 @@
+---
 name: Patikrinam
-on: [push]
-
-
+on: workflow_dispatc
 jobs:
- build:
-  name: Lintinam
-  runs-on: node
-  steps:
-  - name: Irasome tslint ir eslint
-  run: npm install --save-dev eslint globals @eslint/js tslint
-  - name: Pradedam testus
-  run: npm run test
-  run: npm run lint_es
-  run: npm run lint_ts
-  
-  
+  build:
+    name: Lintinam
+    runs-on: node
+    steps:
+      - name: Irasome tslint ir eslint
+        run: npm install --save-dev eslint globals @eslint/js tslint
+      - name: Pradedam testus
+        run: npm run test && workflow_dispatc && npm run lint_ts
