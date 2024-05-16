@@ -1,0 +1,20 @@
+name: Patikrinam
+on: [push]
+
+
+jobs:
+ build:
+  name: Lintinam
+  runs-on: alpine
+  steps:
+  - name: Uzabdeitinam apk repositorys
+  run: apk update
+  - name: Irasome npm ir eslint
+  run: apk add npm
+  run: npm install --save-dev eslint
+  - name: Pradedam testus
+  run: npm run test
+  run: ./node_modules/.bin/eslint --init
+  run: npm run lint
+  
+  
