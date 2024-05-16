@@ -2,7 +2,7 @@
 name: Patikrinam
 on:
   workflow_dispatch: null
-  jobs:
+  fork:
     build:
       name: Lintinam
       runs-on: node
