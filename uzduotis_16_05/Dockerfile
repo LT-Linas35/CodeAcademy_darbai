@@ -1,9 +1,9 @@
 FROM alpine AS pirmas
 RUN apk update
-RUN apk add yarn
+RUN apk add npm
 WORKDIR /
 COPY CodeAcademyTask /CodeAcademyTask
 WORKDIR /CodeAcademyTask
-RUN yarn install && yarn test
-CMD [ "yarn", "run", "dev" ]
+RUN npm install
+CMD [ "npm", "run", "dev" ]
 
