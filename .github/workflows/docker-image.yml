@@ -1,4 +1,4 @@
-ame: docker_build_push_acr
+name: docker_build_push_acr
  
 on:
   workflow_dispatch:
