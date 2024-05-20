@@ -10,3 +10,7 @@ jobs:
    - name: instaliuojam dependencys
      run: |
       npm install --save-dev eslint globals @eslint/js tslint
+   - uses: actions/checkout@v4
+     with:
+      sparse-checkout: |
+       uzduotis_16_05/CodeAcademyTask
