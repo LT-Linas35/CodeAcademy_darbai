@@ -25,5 +25,5 @@ jobs:
    - name: Bandom ES it TS lint 
      run: |
       cd uzduotis_16_05/CodeAcademyTask
-      npm run ts_lint
-      npm run es_lint
+      npm run lint_ts
+      npm run lint_es
