@@ -1,13 +1,14 @@
 name: Patikrinam
 on:
   workflow_dispatch:
+
 jobs:
- pirma_dalis:
-  name: patikrinimas
-  runs-on: ubuntu-latest  
-  steps:  
-   run: |
-    - name: Irasom eslint tslint 
-      npm install --save-dev eslint globals @eslint/js tslint
+  pirma_dalis:
+    name: Praruosiam ir lintinam
+    runs-on: ubuntu-latest  
+    steps:  
+      -name: instaliuojam dependencys
+       run: |
+         npm install --save-dev eslint globals @eslint/js tslint
 #   - name: Pradedam testus
 #     run: npm run test && npm run lint_es && npm run lint_ts
