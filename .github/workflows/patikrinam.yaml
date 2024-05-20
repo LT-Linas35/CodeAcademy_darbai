@@ -34,6 +34,7 @@ jobs:
       login-server: linco.azurecr.io
       username: ${{ secrets.REGISTRY_USERNAME }}
       password: ${{ secrets.REGISTRY_PASSWORD }}
+   - name: Buildinam image ir pushinam
      run: |
       docker build -f uzduotis_16_05/Dockerfile uzduotis_16_05/ -t bandymas.${{ github.sha }}
       docker push bandymas.${{ github.sha }}
