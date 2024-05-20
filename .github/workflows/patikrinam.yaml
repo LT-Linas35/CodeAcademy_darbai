@@ -17,4 +17,5 @@ jobs:
       npm install --save-dev eslint globals @eslint/js tslint
    - name: Bandom testus
      run: |
+      cd uzduotis_16_05/CodeAcademyTask
       npm run test
