@@ -28,7 +28,8 @@ jobs:
 #      cd uzduotis_16_05/CodeAcademyTask
 #      npm run lint_ts
 #      npm run lint_es
-   - uses: azure/docker-login@v1
+   - name: Azure Container Registry Login
+     uses: Azure/docker-login@v1.0.1
      with:
       login-server: linco.azurecr.io
       username: ${{ secrets.REGISTRY_USERNAME }}
