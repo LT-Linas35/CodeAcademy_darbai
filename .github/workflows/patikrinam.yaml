@@ -6,6 +6,7 @@ jobs:
   name: Irasome tslint ir eslint
   runs-on: ubuntu-latest  
   steps:  
-   run: npm install --save-dev eslint globals @eslint/js tslint
+   run: |
+    npm install --save-dev eslint globals @eslint/js tslint
 #   - name: Pradedam testus
 #     run: npm run test && npm run lint_es && npm run lint_ts
