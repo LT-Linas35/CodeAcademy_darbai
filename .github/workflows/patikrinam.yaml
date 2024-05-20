@@ -1,4 +1,3 @@
----
 name: Patikrinam
 on:
   workflow_dispatch:
