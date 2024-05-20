@@ -28,7 +28,6 @@ jobs:
 #      cd uzduotis_16_05/CodeAcademyTask
 #      npm run lint_ts
 #      npm run lint_es
-   - name: Prisiloginam  
    - uses: azure/docker-login@v1
      with:
       login-server: linco.azurecr.io
