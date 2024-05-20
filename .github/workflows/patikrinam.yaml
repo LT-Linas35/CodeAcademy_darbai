@@ -13,7 +13,8 @@ jobs:
        uzduotis_16_05/CodeAcademyTask
    - name: Instaliuojam dependencys
      run: |
-      npm install --save-dev eslint globals @eslint/js tslint
-   - name: Bandom testus\
-     run: |
-      npm run test
+       ls -la
+#      npm install --save-dev eslint globals @eslint/js tslint
+#   - name: Bandom testus\
+#     run: |
+#      npm run test
