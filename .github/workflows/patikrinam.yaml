@@ -11,6 +11,9 @@ jobs:
      with:
       sparse-checkout: |
        uzduotis_16_05/CodeAcademyTask
-   - name: instaliuojam dependencys
+   - name: Instaliuojam dependencys
      run: |
       npm install --save-dev eslint globals @eslint/js tslint
+   - name: Bandom testus\
+     run: |
+      npm run test
