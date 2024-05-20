@@ -16,7 +16,10 @@ jobs:
       cd uzduotis_16_05/CodeAcademyTask
       npm install --save-dev eslint globals @eslint/js tslint
    - name: Bandom testus
-     run: |
-      mkdir -p /etc/todos
-      cd uzduotis_16_05/CodeAcademyTask
-      npm run test
+     uses: actions/setup-node@v4
+      - run: cd uzduotis_16_05/CodeAcademyTask
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test
+#      cd uzduotis_16_05/CodeAcademyTask
+#      npm run test
