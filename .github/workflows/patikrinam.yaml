@@ -15,7 +15,7 @@ jobs:
      run: |
       cd uzduotis_16_05/CodeAcademyTask
       npm install --save-dev eslint globals @eslint/js tslint
-#   *** Neveikia nes negali sukurti direktorijos EACCES: permission denied, mkdir '/etc/todos' ***
+#   *** Neveikia nes negali sukurti direktorijos EACCES: permission denied, mkdir '/etc/todos' sudo ?? ***
    - name: Bandom testus
      run: |
        echo Tarkim testai veikia!
@@ -28,3 +28,11 @@ jobs:
 #      cd uzduotis_16_05/CodeAcademyTask
 #      npm run lint_ts
 #      npm run lint_es
+   - uses: azure/docker-login@v1
+     with:
+      login-server: linco.azurecr.io
+      username: ${{ secrets.REGISTRY_USERNAME }}
+      password: ${{ secrets.REGISTRY_PASSWORD }}
+    run: |
+    docker build -f uzduotis_16_05/Dockerfile uzduotis_16_05/ -t bandymas.${{ github.sha }}
+    docker push bandymas.${{ github.sha }}
