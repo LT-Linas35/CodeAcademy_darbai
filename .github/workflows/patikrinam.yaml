@@ -33,11 +33,11 @@ jobs:
 #      npm run lint_ts
 #      npm run lint_es
    - name: Azure Container Registry Login
-     uses: Azure/docker-login@v1.0.1
+     uses: Azure/docker-login@v       
      with:
       login-server: linco.azurecr.io
-      username: ${{ secrets.REGISTRY_USERNAME }}
-      password: ${{ secrets.REGISTRY_PASSWORD }}
+      username: ${{ secrets.ACR_USERNAME }}
+      password: ${{ secrets.ACR_PASSWORD }}
    - name: Buildinam image ir pushinam
      run: |
       docker build -f uzduotis_16_05/Dockerfile uzduotis_16_05/ -t bandymas.1.0v
