@@ -41,4 +41,5 @@ jobs:
    - name: Buildinam image ir pushinam
      run: |
       docker build -f uzduotis_16_05/Dockerfile uzduotis_16_05/ -t bandymas:latest
+      docker tag bandymas linco.azurecr.io/bandymas
       docker push linco.azurecr.io/bandymas:latest
