@@ -33,7 +33,7 @@ jobs:
 #      npm run lint_ts
 #      npm run lint_es
    - name: Azure Container Registry Login
-     uses: Azure/docker-login@v       
+     uses: azure/docker-login@v2       
      with:
       login-server: linco.azurecr.io
       username: ${{ secrets.ACR_USERNAME }}
