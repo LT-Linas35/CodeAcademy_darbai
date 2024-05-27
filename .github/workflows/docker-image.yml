@@ -29,5 +29,6 @@ jobs:
           context: .
           file: ./uzduotis_16_05/Dockerfile
           push: true
+          tags: 1.0v
       
       
