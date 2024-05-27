@@ -31,7 +31,7 @@ jobs:
         id: push
         uses: docker/build-push-action@v5
         with:
-          file: ./Dockerfile
+          file: ./uzduotis_16_05/Dockerfile
           push: true
           tags: 1.0v
       
