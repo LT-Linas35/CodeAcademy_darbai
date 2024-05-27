@@ -1,4 +1,4 @@
-name: docker_build_push_acr
+ name: docker_build_push_acr
  
 on:
   workflow_dispatch:
@@ -18,8 +18,8 @@ jobs:
           sparse-checkout: |
             uzduotis_16_05
           sparse-checkout-cone-mode: false
-      - name: Patikrinam kokie failai
-        run: ls -la .
+      - name: Pakeiciam direktorija
+        workingdir: ./uzduotis_16_05
             
       - name: Log in to Docker Hub
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
